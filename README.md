@@ -51,8 +51,11 @@ It's necessary to create a .env on the root directory file with the following va
 TOKEN_SECRETE=secret <-Used by JWT to create tokens.
 
 DB_HOST=host
+
 DB_USER=user
+
 DB_PASS=password
+
 DB_DB=database
 
 PORT=port
