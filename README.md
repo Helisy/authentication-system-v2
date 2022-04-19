@@ -24,6 +24,7 @@ git clone https://github.com/Helisy/authentication-system-v2.git
 With node.js installed:
 
 cd your-clone-directory
+
 npm install
 
 ### Setting up MySql users table
