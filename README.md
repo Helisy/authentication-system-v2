@@ -3,6 +3,8 @@ User authentication system, using express.js, JWT, MySql. Improved security.
 ## Functionality and Description
 
 This is a simple authentication system project where you can register a new user, the data is saved on a mySQL database, using bcrypt to encrypt the password and validating if is correct, also using JWT to generate a token which is save on a httpOnly cookie.
+
+See the working poject: https://authentication-system-v2.herokuapp.com
 ## Utilization
 
 Node modules used:
@@ -21,6 +23,7 @@ Open cmd and clone this repository:
 
 git clone https://github.com/Helisy/authentication-system-v2.git
 
+
 With node.js installed:
 
 cd your-clone-directory
@@ -30,6 +33,7 @@ npm install
 ### Setting up MySql users table
 
 Open you desired schema or create a new one, set the chosen schema as default and execute this querry:
+
 
 create table users(
 
@@ -57,6 +61,7 @@ primary key(id)
 ### Creating a .env
 
 It's necessary to create a .env on the root directory file with the following variables:
+
 
 TOKEN_SECRETE=secret <-Used by JWT to create tokens.
 
