@@ -24,7 +24,7 @@ app.use("/auth", authRouter);
 /***/
 
 app.get('/', validateToken, (req, res) => {
-    res.send(`You logged as ${ req.user.firstName}.`);
+    res.render('index.ejs', {userName: req.user.firstName});
 });
 
 app.listen(PORT, () => {

@@ -11,10 +11,11 @@ const router = express.Router();
 const database = require('../database');
 const db = database();
 
-const { isAuthenticated } = require('../middleware/authMiddleware')
+const { isAuthenticated } = require('../middleware/authMiddleware');
+const { response } = require('express');
 
 
-
+//Redirects to /auth/login
 router.get('/', isAuthenticated, (req, res) => {
     res.redirect('auth/login');
 });
@@ -27,6 +28,13 @@ router.get('/login', isAuthenticated, (req, res) => {
     res.render('login.ejs')
 });
 
+//Logs out the user
+router.get('/logout', async (req, res) => {
+    res.cookie('acessToken', '', {maxAge: 1, httpOnly: true});
+    res.redirect('/auth/login');
+});
+
+//Register a new user
 router.post('/register', (req, res) => {
 
     const {firstName, lastName, email, password} = req.body;
@@ -58,6 +66,7 @@ router.post('/register', (req, res) => {
 
 });
 
+//Logs in the user
 router.post('/login', async (req, res) => {
     const {email, password} = req.body;
 
