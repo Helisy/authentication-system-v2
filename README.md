@@ -4,7 +4,7 @@ User authentication system, using express.js, JWT, MySql. Improved security.
 
 This is a simple authentication system project where you can register a new user, the data is saved on a mySQL database, using bcrypt to encrypt the password and validating if is correct, also using JWT to generate a token which is save on a httpOnly cookie.
 
-See the working poject: https://authentication-system-v2.herokuapp.com
+See the working project: https://authentication-system-v2.herokuapp.com
 ## Utilization
 
 Node modules used:
